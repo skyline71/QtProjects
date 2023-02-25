@@ -353,7 +353,7 @@ void MainWindow::on_action_saveas_triggered() //Кнопка сохранени�
     }
 }
 
-void MainWindow::closeEvent(QCloseEvent *event) //Функция перехвата сигнала с закрытием программы
+void MainWindow::closeEvent(QCloseEvent *event) //Функция обработки сигнала с закрытием программы
 {
     if(title.contains("*"))
     {
@@ -403,7 +403,7 @@ void MainWindow::text_info() //Функция с информацией в ст�
                        + QString("\t") + tr("Масштаб ") + (QString::number(scale) + "%"));
 }
 
-void MainWindow::on_plainTextEdit_textChanged() //Сигнал перехвата события изменения документа
+void MainWindow::on_plainTextEdit_textChanged() //Функция обработки сигнала изменения документа
 {
     file_text = ui->plainTextEdit->toPlainText();
     size = file_text.size();
@@ -438,7 +438,7 @@ void MainWindow::on_plainTextEdit_textChanged() //Сигнал перехват�
     text_info();
 }
 
-void MainWindow::on_plainTextEdit_selectionChanged() //Сигнал перехвата события выделения блока в документе
+void MainWindow::on_plainTextEdit_selectionChanged() //Функция обработки сигнала выделения текста внутри документа
 {
     cursor = ui->plainTextEdit->textCursor();
 
