@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
 MainWindow::~MainWindow()
 {
-    delete ui;
+    delete ui; //Деструктор
 }
 
 void MainWindow::on_spinBox_valueChanged(int arg1) //Изменение количества строк
